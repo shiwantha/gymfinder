@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_gym) {
-            startActivity(new Intent(MainActivity.this, GymProfileActivity.class));
+            startActivity(new Intent(MainActivity.this, MainActivity.class));
 
         } else if (id == R.id.nav_trainer) {
             startActivity(new Intent(MainActivity.this, TrainersNearbyActivity.class));
@@ -137,6 +138,15 @@ public class MainActivity extends AppCompatActivity
         mMap=googleMap;
         googleMap.addMarker(new MarkerOptions().position(new LatLng(7.8, 80.77)).title("Capital").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(7.8, 80.77), 11.0f));
+        googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                //Toast.makeText(MainActivity.this, "balla", Toast.LENGTH_SHORT).show();// display toast
+                startActivity(new Intent(MainActivity.this, GymProfileActivity.class));
+                return true;
+            }
+        });
+
 
 
     }
