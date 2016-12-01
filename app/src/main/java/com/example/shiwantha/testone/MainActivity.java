@@ -112,10 +112,16 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_events) {
+            startActivity(new Intent(MainActivity.this, UserProfileActivity.class));
+
 
         } else if (id == R.id.nav_payment) {
+            startActivity(new Intent(MainActivity.this, TrainerProfileActivity.class));
+
 
         }else if (id == R.id.nav_settings) {
+            startActivity(new Intent(MainActivity.this, RegisterActivity.class));
+
 
         }
 
