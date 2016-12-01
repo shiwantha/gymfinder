@@ -98,25 +98,24 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_gym) {
+            startActivity(new Intent(MainActivity.this, GymProfileActivity.class));
 
-            startActivity(new Intent(MainActivity.this, GymDetailActivity.class));
-
-        } else if (id == R.id.nav_gallery) {
-
+        } else if (id == R.id.nav_trainer) {
             startActivity(new Intent(MainActivity.this, TrainersNearbyActivity.class));
 
-
-        } else if (id == R.id.nav_slideshow) {
-
+        } else if (id == R.id.nav_nutri) {
             startActivity(new Intent(MainActivity.this, NutritionistNearbyActivity.class));
 
+        } else if (id == R.id.nav_messages) {
+            startActivity(new Intent(MainActivity.this, JoinTrainerClubActivity.class));
 
-        } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_events) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_payment) {
+
+        }else if (id == R.id.nav_settings) {
 
         }
 
@@ -124,13 +123,14 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+   
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
         mMap=googleMap;
-        googleMap.addMarker(new MarkerOptions().position(new LatLng(5.962747, 80.540276)).title("Capital").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(5.962747, 80.540276), 11.0f));
+        googleMap.addMarker(new MarkerOptions().position(new LatLng(7.8, 80.77)).title("Capital").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(7.8, 80.77), 11.0f));
 
 
     }

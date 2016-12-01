@@ -8,4 +8,8 @@
     <string name="title_activity_gym_detail">GymDetailActivity</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_gym_profile">Gym Profile</string>
+    <string name="title_activity_join_trainer_club">Join Trainer Club</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
 </resources>
